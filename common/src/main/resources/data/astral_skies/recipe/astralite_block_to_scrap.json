@@ -1,0 +1,5 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [{ "item": "astral_skies:astralite_block" }],
+  "result": { "id": "astral_skies:astralite_scrap", "count": 9 }
+}

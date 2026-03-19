@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "astral_skies:floating_stone",
+    "astral_skies:astral_dirt",
+    "astral_skies:crystal_block",
+    "astral_skies:astralite_ore",
+    "astral_skies:deepslate_astralite_ore",
+    "astral_skies:astralite_block"
+  ]
+}

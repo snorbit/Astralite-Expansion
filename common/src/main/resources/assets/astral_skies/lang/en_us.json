@@ -1,0 +1,22 @@
+{
+  "block.astral_skies.floating_stone": "Floating Stone",
+  "block.astral_skies.astral_dirt": "Astral Dirt",
+  "block.astral_skies.crystal_block": "Crystal Block",
+  "block.astral_skies.astralite_ore": "Astralite Ore",
+  "block.astral_skies.deepslate_astralite_ore": "Deepslate Astralite Ore",
+  "block.astral_skies.astralite_block": "Astralite Block",
+
+  "item.astral_skies.astralite_scrap": "Astralite Scrap",
+  "item.astral_skies.astralite_shard": "Astralite Shard",
+  "item.astral_skies.raw_astralite": "Raw Astralite",
+  "item.astral_skies.astralite_upgrade_template": "Astralite Upgrade Template",
+  "item.astral_skies.astral_compass": "Astral Compass",
+
+  "item.astral_skies.astralite_sword": "Astralite Sword",
+  "item.astral_skies.astralite_helmet": "Astralite Helmet",
+  "item.astral_skies.astralite_chestplate": "Astralite Chestplate",
+  "item.astral_skies.astralite_leggings": "Astralite Leggings",
+  "item.astral_skies.astralite_boots": "Astralite Boots",
+
+  "itemGroup.astral_skies.astral_skies_tab": "✦ Astral Skies"
+}

@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": { "item": "astral_skies:raw_astralite" },
+  "result": { "id": "astral_skies:astralite_scrap" },
+  "experience": 1.5,
+  "cookingtime": 400
+}

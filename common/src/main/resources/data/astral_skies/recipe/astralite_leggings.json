@@ -1,0 +1,6 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["SSS", "S S", "S S"],
+  "key": { "S": { "item": "astral_skies:astralite_scrap" } },
+  "result": { "id": "astral_skies:astralite_leggings", "count": 1 }
+}
