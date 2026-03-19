@@ -1,0 +1,40 @@
+{
+  "description": { "translate": "enchantment.astral_skies.starfall" },
+  "exclusive_set": "#minecraft:exclusive_set/damage",
+  "supported_items": "#minecraft:sword",
+  "primary_items": "#minecraft:enchantable/sword",
+  "weight": 1,
+  "max_level": 3,
+  "min_cost": { "base": 30, "per_level_above_first": 15 },
+  "max_cost": { "base": 80, "per_level_above_first": 15 },
+  "anvil_cost": 8,
+  "slots": ["mainhand"],
+  "effects": {
+    "minecraft:damage": [
+      {
+        "effect": {
+          "type": "minecraft:add",
+          "value": {
+            "type": "minecraft:linear",
+            "base": 3.0,
+            "per_level_above_first": 2.0
+          }
+        }
+      }
+    ],
+    "minecraft:post_attack": [
+      {
+        "affected": "victim",
+        "attacker": "attacker",
+        "effect": {
+          "type": "minecraft:ignite",
+          "duration": {
+            "type": "minecraft:linear",
+            "base": 2.0,
+            "per_level_above_first": 1.0
+          }
+        }
+      }
+    ]
+  }
+}

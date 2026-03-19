@@ -6,6 +6,7 @@
     "astral_skies:crystal_block",
     "astral_skies:astralite_ore",
     "astral_skies:deepslate_astralite_ore",
-    "astral_skies:astralite_block"
+    "astral_skies:astralite_block",
+    "astral_skies:astral_portal_frame"
   ]
 }

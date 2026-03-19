@@ -1,0 +1,35 @@
+{
+  "description": { "translate": "enchantment.astral_skies.void_shield" },
+  "supported_items": "#minecraft:armor",
+  "primary_items": "#minecraft:enchantable/armor",
+  "weight": 1,
+  "max_level": 4,
+  "min_cost": { "base": 25, "per_level_above_first": 12 },
+  "max_cost": { "base": 75, "per_level_above_first": 12 },
+  "anvil_cost": 8,
+  "slots": ["any"],
+  "effects": {
+    "minecraft:attributes": [
+      {
+        "id": "astral_skies:void_shield_armor",
+        "attribute": "minecraft:armor",
+        "operation": "add_value",
+        "amount": {
+          "type": "minecraft:linear",
+          "base": 1.0,
+          "per_level_above_first": 1.0
+        }
+      },
+      {
+        "id": "astral_skies:void_shield_toughness",
+        "attribute": "minecraft:armor_toughness",
+        "operation": "add_value",
+        "amount": {
+          "type": "minecraft:linear",
+          "base": 0.5,
+          "per_level_above_first": 0.5
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "description": { "translate": "enchantment.astral_skies.astral_edge" },
+  "exclusive_set": "#minecraft:exclusive_set/damage",
+  "supported_items": "#minecraft:sword",
+  "primary_items": "#minecraft:enchantable/sword",
+  "weight": 2,
+  "max_level": 3,
+  "min_cost": { "base": 20, "per_level_above_first": 12 },
+  "max_cost": { "base": 65, "per_level_above_first": 12 },
+  "anvil_cost": 6,
+  "slots": ["mainhand"],
+  "effects": {
+    "minecraft:damage": [
+      {
+        "effect": {
+          "type": "minecraft:add",
+          "value": {
+            "type": "minecraft:linear",
+            "base": 2.0,
+            "per_level_above_first": 2.0
+          }
+        }
+      }
+    ],
+    "minecraft:post_attack": [
+      {
+        "affected": "victim",
+        "attacker": "attacker",
+        "effect": {
+          "type": "minecraft:apply_mob_effect",
+          "to_apply": "minecraft:slowness",
+          "min_duration": {
+            "type": "minecraft:linear",
+            "base": 1.5,
+            "per_level_above_first": 0.5
+          },
+          "max_duration": {
+            "type": "minecraft:linear",
+            "base": 2.0,
+            "per_level_above_first": 0.5
+          },
+          "min_amplifier": { "type": "minecraft:constant", "value": 0 },
+          "max_amplifier": { "type": "minecraft:constant", "value": 1 }
+        }
+      }
+    ]
+  }
+}

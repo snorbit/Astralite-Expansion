@@ -1,0 +1,27 @@
+{
+  "description": { "translate": "enchantment.astral_skies.cloud_step" },
+  "supported_items": "#minecraft:boots",
+  "primary_items": "#minecraft:enchantable/foot_armor",
+  "weight": 1,
+  "max_level": 1,
+  "min_cost": { "base": 25, "per_level_above_first": 0 },
+  "max_cost": { "base": 70, "per_level_above_first": 0 },
+  "anvil_cost": 8,
+  "slots": ["feet"],
+  "effects": {
+    "minecraft:attributes": [
+      {
+        "id": "astral_skies:cloud_step_jump",
+        "attribute": "minecraft:jump_strength",
+        "operation": "add_multiplied_total",
+        "amount": { "type": "minecraft:constant", "value": 0.5 }
+      },
+      {
+        "id": "astral_skies:cloud_step_fall",
+        "attribute": "minecraft:safe_fall_distance",
+        "operation": "add_value",
+        "amount": { "type": "minecraft:constant", "value": 8.0 }
+      }
+    ]
+  }
+}

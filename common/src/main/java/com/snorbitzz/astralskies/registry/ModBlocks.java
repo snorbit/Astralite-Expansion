@@ -95,6 +95,22 @@ public class ModBlocks {
                     .sound(SoundType.METAL)
                     .lightLevel(state -> 4)));
 
+    // ─── Portal ───────────────────────────────────────────────────────────────
+
+    /**
+     * Astral Portal Frame — placed in a 3×4 rectangle (like Nether portal).
+     * Once ignited by a right-click with an Astral Compass, it opens the
+     * Astral Sky dimension portal. Glows gently when formed correctly.
+     * Craft: 1 Astralite Block surrounded by 4 Astralite Scrap (+ pattern).
+     */
+    public static final RegistryObject<Block> ASTRAL_PORTAL_FRAME = register("astral_portal_frame",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_CYAN)
+                    .requiresCorrectToolForDrops()
+                    .strength(50.0f, 1200.0f)   // Obsidian-level blast resistant
+                    .sound(SoundType.METAL)
+                    .lightLevel(state -> 3)));   // Faint glow
+
     // ─── Registration Helpers ─────────────────────────────────────────────────
 
     public static void init() {

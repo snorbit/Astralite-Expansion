@@ -3,12 +3,14 @@ package com.snorbitzz.astralskies;
 import com.snorbitzz.astralskies.platform.Services;
 import com.snorbitzz.astralskies.registry.ModBlocks;
 import com.snorbitzz.astralskies.registry.ModCreativeTabs;
+import com.snorbitzz.astralskies.registry.ModEnchantments;
 import com.snorbitzz.astralskies.registry.ModGear;
 import com.snorbitzz.astralskies.registry.ModItems;
+import com.snorbitzz.astralskies.worldgen.ModWorldGen;
 
 /**
- * Shared entry point — called by both the Fabric and NeoForge loader-specific entry points.
- * Registration order matters: Blocks → Items → Gear → Creative Tab.
+ * Shared entry point for both Fabric and NeoForge.
+ * Order: Blocks → Items → Gear → Creative Tab → WorldGen → Enchantments.
  */
 public class CommonClass {
 
@@ -22,5 +24,7 @@ public class CommonClass {
         ModItems.init();
         ModGear.init();
         ModCreativeTabs.init();
+        ModWorldGen.init();
+        ModEnchantments.init();
     }
 }

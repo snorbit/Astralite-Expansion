@@ -28,8 +28,9 @@ public class ModCreativeTabs {
                         output.accept(ModBlocks.ASTRALITE_ORE.get());
                         output.accept(ModBlocks.DEEPSLATE_ASTRALITE_ORE.get());
 
-                        // Processed blocks
+                        // Processed blocks / structures
                         output.accept(ModBlocks.ASTRALITE_BLOCK.get());
+                        output.accept(ModBlocks.ASTRAL_PORTAL_FRAME.get());
 
                         // Raw materials
                         output.accept(ModItems.RAW_ASTRALITE.get());

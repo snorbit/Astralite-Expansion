@@ -1,0 +1,25 @@
+{
+  "description": { "translate": "enchantment.astral_skies.sky_miner" },
+  "supported_items": "#minecraft:pickaxe",
+  "primary_items": "#minecraft:enchantable/mining",
+  "weight": 3,
+  "max_level": 4,
+  "min_cost": { "base": 10, "per_level_above_first": 8 },
+  "max_cost": { "base": 50, "per_level_above_first": 8 },
+  "anvil_cost": 3,
+  "slots": ["mainhand"],
+  "effects": {
+    "minecraft:attributes": [
+      {
+        "id": "astral_skies:sky_miner_speed",
+        "attribute": "minecraft:mining_efficiency",
+        "operation": "add_value",
+        "amount": {
+          "type": "minecraft:linear",
+          "base": 2.0,
+          "per_level_above_first": 2.0
+        }
+      }
+    ]
+  }
+}

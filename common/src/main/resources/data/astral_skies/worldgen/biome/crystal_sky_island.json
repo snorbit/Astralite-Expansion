@@ -1,0 +1,39 @@
+{
+  "has_precipitation": false,
+  "temperature": 0.0,
+  "temperature_modifier": "none",
+  "downfall": 0.0,
+  "effects": {
+    "sky_color": 11861840,
+    "water_color": 4396129,
+    "water_fog_color": 4176875,
+    "fog_color": 12638463,
+    "music": {
+      "sound": "minecraft:music.nether.basalt_deltas",
+      "min_delay": 12000,
+      "max_delay": 24000,
+      "replace_current_music": false
+    },
+    "ambient_particle": {
+      "probability": 0.021,
+      "options": { "type": "minecraft:end_rod" }
+    }
+  },
+  "carvers": {},
+  "features": [
+    [], [], [], [], [],
+    ["astral_skies:ore_astralite_sky"],
+    [], [], [], []
+  ],
+  "creature_spawn_probability": 0.07,
+  "spawners": {
+    "creature": [],
+    "monster": [],
+    "ambient": [],
+    "underground_water_creature": [],
+    "water_creature": [],
+    "water_ambient": [],
+    "misc": []
+  },
+  "spawn_costs": {}
+}

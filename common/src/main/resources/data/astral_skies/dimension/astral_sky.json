@@ -1,0 +1,11 @@
+{
+  "type": "astral_skies:astral_sky",
+  "generator": {
+    "type": "minecraft:noise",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "astral_skies:rocky_sky_island"
+    },
+    "settings": "minecraft:floating_islands"
+  }
+}

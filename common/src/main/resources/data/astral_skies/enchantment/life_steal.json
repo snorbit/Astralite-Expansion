@@ -1,0 +1,40 @@
+{
+  "description": { "translate": "enchantment.astral_skies.life_steal" },
+  "exclusive_set": "#minecraft:exclusive_set/damage",
+  "supported_items": "#minecraft:sword",
+  "primary_items": "#minecraft:enchantable/sword",
+  "weight": 1,
+  "max_level": 5,
+  "min_cost": { "base": 35, "per_level_above_first": 15 },
+  "max_cost": { "base": 85, "per_level_above_first": 15 },
+  "anvil_cost": 10,
+  "slots": ["mainhand"],
+  "effects": {
+    "minecraft:damage": [
+      {
+        "effect": {
+          "type": "minecraft:add",
+          "value": {
+            "type": "minecraft:linear",
+            "base": 2.0,
+            "per_level_above_first": 1.5
+          }
+        }
+      }
+    ],
+    "minecraft:post_attack": [
+      {
+        "affected": "attacker",
+        "attacker": "attacker",
+        "effect": {
+          "type": "minecraft:heal",
+          "amount": {
+            "type": "minecraft:linear",
+            "base": 1.0,
+            "per_level_above_first": 0.5
+          }
+        }
+      }
+    ]
+  }
+}

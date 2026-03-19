@@ -1,0 +1,40 @@
+{
+  "has_precipitation": true,
+  "temperature": 0.2,
+  "temperature_modifier": "none",
+  "downfall": 0.9,
+  "effects": {
+    "sky_color": 3747932,
+    "water_color": 4145534,
+    "water_fog_color": 329011,
+    "fog_color": 7120895,
+    "thunder_sound_event": "minecraft:entity.lightning_bolt.thunder",
+    "music": {
+      "sound": "minecraft:music.nether.soul_sand_valley",
+      "min_delay": 12000,
+      "max_delay": 24000,
+      "replace_current_music": false
+    },
+    "ambient_particle": {
+      "probability": 0.003,
+      "options": { "type": "minecraft:electric_spark" }
+    }
+  },
+  "carvers": {},
+  "features": [
+    [], [], [], [], [],
+    ["astral_skies:ore_astralite_sky"],
+    [], [], [], []
+  ],
+  "creature_spawn_probability": 0.05,
+  "spawners": {
+    "creature": [],
+    "monster": [],
+    "ambient": [],
+    "underground_water_creature": [],
+    "water_creature": [],
+    "water_ambient": [],
+    "misc": []
+  },
+  "spawn_costs": {}
+}

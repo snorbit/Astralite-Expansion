@@ -1,0 +1,40 @@
+{
+  "description": { "translate": "enchantment.astral_skies.gale_force" },
+  "supported_items": "#minecraft:bow",
+  "primary_items": "#minecraft:enchantable/bow",
+  "weight": 2,
+  "max_level": 4,
+  "min_cost": { "base": 15, "per_level_above_first": 10 },
+  "max_cost": { "base": 55, "per_level_above_first": 10 },
+  "anvil_cost": 4,
+  "slots": ["mainhand"],
+  "effects": {
+    "minecraft:projectile_spawned": [
+      {
+        "effect": {
+          "type": "minecraft:attribute",
+          "id": "astral_skies:gale_force_speed",
+          "attribute": "minecraft:generic.movement_speed",
+          "operation": "add_multiplied_total",
+          "amount": {
+            "type": "minecraft:linear",
+            "base": 0.15,
+            "per_level_above_first": 0.15
+          }
+        }
+      }
+    ],
+    "minecraft:damage": [
+      {
+        "effect": {
+          "type": "minecraft:add",
+          "value": {
+            "type": "minecraft:linear",
+            "base": 1.0,
+            "per_level_above_first": 1.0
+          }
+        }
+      }
+    ]
+  }
+}
