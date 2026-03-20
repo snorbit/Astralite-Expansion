@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SAS",
+    "BCB",
+    "SHS"
+  ],
+  "key": {
+    "S": { "item": "astral_skies:astralite_shard" },
+    "A": { "item": "astral_skies:astral_compass" },
+    "B": { "item": "astral_skies:astralite_block" },
+    "C": { "item": "minecraft:comparator" },
+    "H": { "item": "astral_skies:aircraft_hull" }
+  },
+  "result": { "id": "astral_skies:aircraft_control_panel", "count": 1 }
+}

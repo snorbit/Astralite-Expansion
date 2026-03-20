@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "active=false": { "model": "astral_skies:block/aircraft_engine_off" },
+    "active=true": { "model": "astral_skies:block/aircraft_engine_on" }
+  }
+}

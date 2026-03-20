@@ -1,5 +1,7 @@
 package com.snorbitzz.astralskies;
 
+import com.snorbitzz.astralskies.aircraft.AircraftBlocks;
+import com.snorbitzz.astralskies.aircraft.AircraftEntities;
 import com.snorbitzz.astralskies.platform.Services;
 import com.snorbitzz.astralskies.registry.ModBlocks;
 import com.snorbitzz.astralskies.registry.ModCreativeTabs;
@@ -10,7 +12,7 @@ import com.snorbitzz.astralskies.worldgen.ModWorldGen;
 
 /**
  * Shared entry point for both Fabric and NeoForge.
- * Order: Blocks → Items → Gear → Creative Tab → WorldGen → Enchantments.
+ * Order: Blocks → Items → Gear → Aircraft → Creative Tab → WorldGen → Enchantments.
  */
 public class CommonClass {
 
@@ -23,6 +25,8 @@ public class CommonClass {
         ModBlocks.init();
         ModItems.init();
         ModGear.init();
+        AircraftBlocks.init();
+        AircraftEntities.init();
         ModCreativeTabs.init();
         ModWorldGen.init();
         ModEnchantments.init();

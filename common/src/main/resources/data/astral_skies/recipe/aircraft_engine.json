@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SBS",
+    "HAH",
+    "SBS"
+  ],
+  "key": {
+    "S": { "item": "astral_skies:astralite_scrap" },
+    "B": { "item": "astral_skies:astralite_block" },
+    "H": { "item": "astral_skies:aircraft_hull" },
+    "A": { "item": "minecraft:furnace" }
+  },
+  "result": { "id": "astral_skies:aircraft_engine", "count": 1 }
+}
