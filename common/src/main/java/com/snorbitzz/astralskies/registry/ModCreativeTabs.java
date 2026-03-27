@@ -1,6 +1,8 @@
 package com.snorbitzz.astralskies.registry;
 
 import com.snorbitzz.astralskies.Constants;
+import com.snorbitzz.astralskies.aircraft.AircraftBlocks;
+import com.snorbitzz.astralskies.registry.LegendaryItems;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
@@ -49,6 +51,26 @@ public class ModCreativeTabs {
                         output.accept(ModGear.ASTRALITE_CHESTPLATE.get());
                         output.accept(ModGear.ASTRALITE_LEGGINGS.get());
                         output.accept(ModGear.ASTRALITE_BOOTS.get());
+
+                        // Aircraft components
+                        output.accept(AircraftBlocks.AIRCRAFT_HULL);
+                        output.accept(AircraftBlocks.AIRCRAFT_ENGINE);
+                        output.accept(AircraftBlocks.AIRCRAFT_PROPELLER);
+                        output.accept(AircraftBlocks.AIRCRAFT_CONTROL_PANEL);
+
+                        // Special / boss drops (Kurumi)
+                        output.accept(ModItems.ZAFKIEL.get());
+                        output.accept(ModItems.KURUMI_EGG.get());
+
+                        // Legendary boss drops (armor)
+                        output.accept(LegendaryItems.LEVIATHAN_HELMET.get());
+                        output.accept(LegendaryItems.STORMCALL_CHESTPLATE.get());
+                        output.accept(LegendaryItems.VOID_STALKER_LEGGINGS.get());
+                        output.accept(LegendaryItems.SOVEREIGN_BOOTS.get());
+
+                        // Legendary boss drops (weapons)
+                        output.accept(LegendaryItems.TYRANTS_BLADE.get());
+                        output.accept(LegendaryItems.TITANS_PICKAXE.get());
                     })
                     .build());
 

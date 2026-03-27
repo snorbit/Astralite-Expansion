@@ -111,6 +111,24 @@ public class ModBlocks {
                     .sound(SoundType.METAL)
                     .lightLevel(state -> 3)));   // Faint glow
 
+    /**
+     * Astral Portal — the active portal face block.
+     * Right-click to teleport (overworld ↔ Astral Sky dimension).
+     * Built by right-clicking a completed portal frame with an Astral Compass.
+     * Visual: teal translucent, emits light 11.
+     */
+    public static final RegistryObject<com.snorbitzz.astralskies.block.AstralPortalBlock> ASTRAL_PORTAL =
+            registerTyped("astral_portal",
+                    () -> new com.snorbitzz.astralskies.block.AstralPortalBlock(
+                            BlockBehaviour.Properties.of()
+                                    .mapColor(MapColor.COLOR_CYAN)
+                                    .noCollission()
+                                    .noOcclusion()
+                                    .strength(-1.0f)        // Unbreakable
+                                    .sound(SoundType.GLASS)
+                                    .lightLevel(state -> 11)));
+
+
     // ─── Registration Helpers ─────────────────────────────────────────────────
 
     public static void init() {

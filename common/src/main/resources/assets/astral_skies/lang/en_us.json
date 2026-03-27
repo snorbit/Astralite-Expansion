@@ -37,5 +37,33 @@
   "enchantment.astral_skies.sky_walker": "Sky Walker",
   "enchantment.astral_skies.cloud_step": "Cloud Step",
   "enchantment.astral_skies.sky_miner": "Sky Miner",
-  "enchantment.astral_skies.gale_force": "Gale Force"
+  "enchantment.astral_skies.gale_force": "Gale Force",
+
+  "block.astral_skies.aircraft_hull": "Aircraft Hull",
+  "block.astral_skies.aircraft_engine": "Aircraft Engine",
+  "block.astral_skies.aircraft_propeller": "Aircraft Propeller",
+  "block.astral_skies.aircraft_control_panel": "Aircraft Control Panel",
+
+  "item.astral_skies.zafkiel": "Zafkiel",
+  "item.astral_skies.kurumi_egg": "Kurumi Egg",
+
+  "entity.astral_skies.riley_npc": "Riley",
+  "entity.astral_skies.riley_boss": "Riley",
+  "entity.astral_skies.kurumi_boss": "†Kurumi†",
+  "entity.astral_skies.kurumi_companion": "†Kurumi†",
+  "entity.astral_skies.aircraft": "Aircraft",
+
+  "entity.astral_skies.leviathan": "Leviathan",
+  "entity.astral_skies.storm_warden": "Storm Warden",
+  "entity.astral_skies.void_stalker": "Void Stalker",
+  "entity.astral_skies.crystal_sovereign": "Crystal Sovereign",
+  "entity.astral_skies.sky_tyrant": "Sky Tyrant",
+  "entity.astral_skies.ruined_titan": "Ruined Titan",
+
+  "item.astral_skies.leviathan_helmet": "Leviathan Helmet",
+  "item.astral_skies.stormcall_chestplate": "Stormcall Chestplate",
+  "item.astral_skies.void_stalker_leggings": "Void Stalker Leggings",
+  "item.astral_skies.sovereign_boots": "Sovereign's Boots",
+  "item.astral_skies.tyrants_blade": "Tyrant's Blade",
+  "item.astral_skies.titans_pickaxe": "Titan's Pickaxe"
 }
