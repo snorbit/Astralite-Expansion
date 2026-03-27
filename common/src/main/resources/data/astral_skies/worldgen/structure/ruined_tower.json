@@ -1,0 +1,7 @@
+{
+  "type": "astral_skies:ruined_tower",
+  "biomes": "#astral_skies:has_structure/ruined_tower",
+  "step": "surface_structures",
+  "terrain_adaptation": "none",
+  "spawn_overrides": {}
+}

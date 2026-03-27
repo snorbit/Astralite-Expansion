@@ -71,6 +71,9 @@ public class ModCreativeTabs {
                         // Legendary boss drops (weapons)
                         output.accept(LegendaryItems.TYRANTS_BLADE.get());
                         output.accept(LegendaryItems.TITANS_PICKAXE.get());
+
+                        // Portal
+                        output.accept(ModBlocks.ASTRAL_PORTAL.get());
                     })
                     .build());
 

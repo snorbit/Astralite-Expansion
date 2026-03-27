@@ -11,6 +11,7 @@ import com.snorbitzz.astralskies.registry.ModEnchantments;
 import com.snorbitzz.astralskies.registry.ModGear;
 import com.snorbitzz.astralskies.registry.ModItems;
 import com.snorbitzz.astralskies.worldgen.ModWorldGen;
+import com.snorbitzz.astralskies.worldgen.structure.ModStructures;
 
 /**
  * Shared entry point for both Fabric and NeoForge.
@@ -33,6 +34,7 @@ public class CommonClass {
         ModEntities.init();
         ModCreativeTabs.init();
         ModWorldGen.init();
+        ModStructures.init();
         ModEnchantments.init();
     }
 }

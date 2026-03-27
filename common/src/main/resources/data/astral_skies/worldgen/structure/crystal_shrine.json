@@ -1,0 +1,7 @@
+{
+  "type": "astral_skies:crystal_shrine",
+  "biomes": "#astral_skies:has_structure/crystal_shrine",
+  "step": "surface_structures",
+  "terrain_adaptation": "none",
+  "spawn_overrides": {}
+}

@@ -1,0 +1,11 @@
+{
+  "structures": [{ "structure": "astral_skies:crystal_shrine", "weight": 1 }],
+  "frequency_reduction_method": "legacy_type_1",
+  "frequency": 0.025,
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 48,
+    "separation": 16,
+    "salt": 339482958
+  }
+}

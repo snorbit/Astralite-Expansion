@@ -139,10 +139,15 @@ public class ModBlocks {
         T block = supplier.get();
         ResourceLocation id = ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, name);
         Registry.register(BuiltInRegistries.BLOCK, id, block);
-        // Auto-register BlockItem
         Registry.register(BuiltInRegistries.ITEM, id,
                 new BlockItem(block, new Item.Properties()));
         return new RegistryObject<>(block);
+    }
+
+    /** Same as register — exists for typed subclasses so generics resolve cleanly. */
+    @SuppressWarnings("unchecked")
+    private static <T extends Block> RegistryObject<T> registerTyped(String name, Supplier<T> supplier) {
+        return (RegistryObject<T>) register(name, (Supplier<Block>) (Supplier<?>) supplier);
     }
 
     /** Minimal holder so callers can use .get() consistently. */

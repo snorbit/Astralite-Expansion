@@ -65,5 +65,11 @@
   "item.astral_skies.void_stalker_leggings": "Void Stalker Leggings",
   "item.astral_skies.sovereign_boots": "Sovereign's Boots",
   "item.astral_skies.tyrants_blade": "Tyrant's Blade",
-  "item.astral_skies.titans_pickaxe": "Titan's Pickaxe"
+  "item.astral_skies.titans_pickaxe": "Titan's Pickaxe",
+
+  "block.astral_skies.astral_portal": "Astral Portal",
+
+  "structure.astral_skies.sky_temple": "Sky Temple",
+  "structure.astral_skies.ruined_tower": "Ruined Tower",
+  "structure.astral_skies.crystal_shrine": "Crystal Shrine"
 }

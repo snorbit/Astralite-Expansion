@@ -33,8 +33,9 @@ public class ModItems {
 
     // ─── Tools & Utility ─────────────────────────────────────────────────────
 
-    public static final RegistryObject<Item> ASTRAL_COMPASS = register("astral_compass",
-            () -> new Item(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<com.snorbitzz.astralskies.item.AstralCompassItem> ASTRAL_COMPASS =
+            register("astral_compass",
+                    () -> new com.snorbitzz.astralskies.item.AstralCompassItem(new Item.Properties()));
 
     // ─── Boss Drops & Special Items ───────────────────────────────────────────
 

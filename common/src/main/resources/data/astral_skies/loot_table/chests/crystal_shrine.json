@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": { "type": "minecraft:uniform", "min": 4, "max": 7 },
+      "entries": [
+        { "type": "minecraft:item", "name": "astral_skies:astralite_shard", "weight": 20 },
+        { "type": "minecraft:item", "name": "astral_skies:astralite_scrap", "weight": 15 },
+        { "type": "minecraft:item", "name": "astral_skies:astralite_upgrade_template", "weight": 8 },
+        { "type": "minecraft:item", "name": "astral_skies:astral_compass", "weight": 4 },
+        { "type": "minecraft:item", "name": "minecraft:enchanted_golden_apple", "weight": 2 },
+        { "type": "minecraft:item", "name": "astral_skies:astralite_block", "weight": 5 },
+        { "type": "minecraft:item", "name": "minecraft:diamond", "weight": 6 },
+        { "type": "minecraft:item", "name": "minecraft:netherite_scrap", "weight": 1 }
+      ]
+    }
+  ]
+}

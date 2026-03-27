@@ -1,0 +1,11 @@
+{
+  "structures": [{ "structure": "astral_skies:ruined_tower", "weight": 1 }],
+  "frequency_reduction_method": "legacy_type_1",
+  "frequency": 0.07,
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 24,
+    "separation": 6,
+    "salt": 228391847
+  }
+}
