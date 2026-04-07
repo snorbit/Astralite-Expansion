@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": { "id": "astral_skies:astralite_ore" },
+    "title": { "translate": "advancements.astral_skies.sky_miner.title" },
+    "description": { "translate": "advancements.astral_skies.sky_miner.desc" },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "astral_skies:sky_explorer",
+  "criteria": {
+    "mine_astralite": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": {
+          "block": { "blocks": ["astral_skies:astralite_ore", "astral_skies:deepslate_astralite_ore"] }
+        }
+      }
+    }
+  },
+  "requirements": [["mine_astralite"]]
+}

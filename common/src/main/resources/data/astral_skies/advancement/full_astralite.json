@@ -1,0 +1,39 @@
+{
+  "display": {
+    "icon": { "id": "astral_skies:astralite_chestplate" },
+    "title": { "translate": "advancements.astral_skies.full_astralite.title" },
+    "description": { "translate": "advancements.astral_skies.full_astralite.desc" },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "astral_skies:sky_miner",
+  "criteria": {
+    "helmet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{ "items": ["astral_skies:astralite_helmet"] }]
+      }
+    },
+    "chestplate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{ "items": ["astral_skies:astralite_chestplate"] }]
+      }
+    },
+    "leggings": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{ "items": ["astral_skies:astralite_leggings"] }]
+      }
+    },
+    "boots": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{ "items": ["astral_skies:astralite_boots"] }]
+      }
+    }
+  },
+  "requirements": [["helmet"], ["chestplate"], ["leggings"], ["boots"]]
+}

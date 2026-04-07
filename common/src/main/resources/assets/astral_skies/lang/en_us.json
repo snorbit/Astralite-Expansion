@@ -71,5 +71,29 @@
 
   "structure.astral_skies.sky_temple": "Sky Temple",
   "structure.astral_skies.ruined_tower": "Ruined Tower",
-  "structure.astral_skies.crystal_shrine": "Crystal Shrine"
+  "structure.astral_skies.crystal_shrine": "Crystal Shrine",
+
+  "advancements.astral_skies.sky_explorer.title": "Into the Astral Sky",
+  "advancements.astral_skies.sky_explorer.desc": "Enter the Astral Sky dimension.",
+
+  "advancements.astral_skies.sky_miner.title": "Rock of the Sky",
+  "advancements.astral_skies.sky_miner.desc": "Mine your first Astralite Ore.",
+
+  "advancements.astral_skies.sky_flyer.title": "Born to Fly",
+  "advancements.astral_skies.sky_flyer.desc": "Pilot an aircraft through the sky.",
+
+  "advancements.astral_skies.boss_hunter.title": "Boss Hunter",
+  "advancements.astral_skies.boss_hunter.desc": "Defeat any sky boss.",
+
+  "advancements.astral_skies.leviathan_slain.title": "The Leviathan Falls",
+  "advancements.astral_skies.leviathan_slain.desc": "Slay the mighty Leviathan.",
+
+  "advancements.astral_skies.full_astralite.title": "Draped in Stars",
+  "advancements.astral_skies.full_astralite.desc": "Equip a full set of Astralite armor.",
+
+  "advancements.astral_skies.legendary_gear.title": "Legend Awakened",
+  "advancements.astral_skies.legendary_gear.desc": "Obtain a legendary item dropped by one of the sky bosses.",
+
+  "advancements.astral_skies.secret_discovery.title": "The Clock Ticks",
+  "advancements.astral_skies.secret_discovery.desc": "You found something that shouldn't exist."
 }

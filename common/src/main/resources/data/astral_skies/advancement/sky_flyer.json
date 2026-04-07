@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": { "id": "astral_skies:aircraft_control_panel" },
+    "title": { "translate": "advancements.astral_skies.sky_flyer.title" },
+    "description": { "translate": "advancements.astral_skies.sky_flyer.desc" },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "astral_skies:sky_explorer",
+  "criteria": {
+    "ride_aircraft": {
+      "trigger": "minecraft:start_riding_trigger",
+      "conditions": {
+        "vehicle": {
+          "type": "astral_skies:aircraft"
+        }
+      }
+    }
+  },
+  "requirements": [["ride_aircraft"]]
+}

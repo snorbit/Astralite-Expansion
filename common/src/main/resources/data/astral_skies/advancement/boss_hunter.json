@@ -1,0 +1,46 @@
+{
+  "display": {
+    "icon": { "id": "astral_skies:astralite_sword" },
+    "title": { "translate": "advancements.astral_skies.boss_hunter.title" },
+    "description": { "translate": "advancements.astral_skies.boss_hunter.desc" },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "astral_skies:sky_explorer",
+  "criteria": {
+    "kill_leviathan": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": { "entity": { "type": "astral_skies:leviathan" } }
+    },
+    "kill_storm_warden": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": { "entity": { "type": "astral_skies:storm_warden" } }
+    },
+    "kill_void_stalker": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": { "entity": { "type": "astral_skies:void_stalker" } }
+    },
+    "kill_crystal_sovereign": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": { "entity": { "type": "astral_skies:crystal_sovereign" } }
+    },
+    "kill_sky_tyrant": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": { "entity": { "type": "astral_skies:sky_tyrant" } }
+    },
+    "kill_ruined_titan": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": { "entity": { "type": "astral_skies:ruined_titan" } }
+    },
+    "kill_riley_boss": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": { "entity": { "type": "astral_skies:riley_boss" } }
+    }
+  },
+  "requirements": [
+    ["kill_leviathan", "kill_storm_warden", "kill_void_stalker",
+     "kill_crystal_sovereign", "kill_sky_tyrant", "kill_ruined_titan", "kill_riley_boss"]
+  ]
+}

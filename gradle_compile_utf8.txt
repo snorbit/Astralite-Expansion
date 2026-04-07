@@ -1,0 +1,81 @@
+﻿To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.8/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :buildSrc:extractPluginRequests
+> Task :buildSrc:generatePluginAdapters
+> Task :buildSrc:compileJava
+> Task :buildSrc:compileGroovy NO-SOURCE
+> Task :buildSrc:compileGroovyPlugins
+> Task :buildSrc:pluginDescriptors
+> Task :buildSrc:processResources
+> Task :buildSrc:classes
+> Task :buildSrc:jar
+.\gradlew.bat : 
+At line:1 char:384
++ ... radleHome'; 
+.\gradlew.bat 
+:neoforge:compileJava 
+--no-daemon > C:\User ...
++                 ~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : NotSpecified: (:  
+  String) [], RemoteExc   
+ eption
+    + FullyQualifiedError 
+   Id : NativeCommandErr  
+  or
+ 
+FAILURE: Build failed 
+with an exception.
+
+* What went wrong:
+A problem occurred 
+configuring root project 
+'Astralite-Expansion'.
+> Could not resolve all 
+artifacts for 
+configuration 
+':classpath'.
+   > Could not resolve net
+.fabricmc:fabric-loom:1.8-
+SNAPSHOT.
+     Required by:
+         project : > fabri
+c-loom:fabric-loom.gradle.
+plugin:1.8-SNAPSHOT:202411
+26.112513-13
+      > Plugin net.fabricm
+c:fabric-loom:1.8-SNAPSHOT
+:20241126.112513-13 
+requires at least Gradle 
+8.10. This build uses 
+Gradle 8.8.
+
+* Try:
+> Upgrade to at least 
+Gradle 8.10. See the 
+instructions at https://do
+cs.gradle.org/8.8/userguid
+e/upgrading_version_8.html
+#sub:updating-gradle.
+> Downgrade plugin net.fab
+ricmc:fabric-loom:1.8-SNAP
+SHOT:20241126.112513-13 
+to an older version 
+compatible with Gradle 
+8.8.
+> Run with --stacktrace 
+option to get the stack 
+trace.
+> Run with --info or 
+--debug option to get 
+more log output.
+> Run with --scan to get 
+full insights.
+> Get more help at 
+https://help.gradle.org.
+
+BUILD FAILED in 39s
+7 actionable tasks: 7 executed
+

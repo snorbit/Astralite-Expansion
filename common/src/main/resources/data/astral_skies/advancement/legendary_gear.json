@@ -1,0 +1,42 @@
+{
+  "display": {
+    "icon": { "id": "astral_skies:leviathan_helmet" },
+    "title": { "translate": "advancements.astral_skies.legendary_gear.title" },
+    "description": { "translate": "advancements.astral_skies.legendary_gear.desc" },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "astral_skies:boss_hunter",
+  "criteria": {
+    "get_leviathan_helmet": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": { "items": [{ "items": ["astral_skies:leviathan_helmet"] }] }
+    },
+    "get_stormcall_chestplate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": { "items": [{ "items": ["astral_skies:stormcall_chestplate"] }] }
+    },
+    "get_void_stalker_leggings": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": { "items": [{ "items": ["astral_skies:void_stalker_leggings"] }] }
+    },
+    "get_sovereign_boots": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": { "items": [{ "items": ["astral_skies:sovereign_boots"] }] }
+    },
+    "get_tyrants_blade": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": { "items": [{ "items": ["astral_skies:tyrants_blade"] }] }
+    },
+    "get_titans_pickaxe": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": { "items": [{ "items": ["astral_skies:titans_pickaxe"] }] }
+    }
+  },
+  "requirements": [
+    ["get_leviathan_helmet", "get_stormcall_chestplate", "get_void_stalker_leggings",
+     "get_sovereign_boots", "get_tyrants_blade", "get_titans_pickaxe"]
+  ]
+}

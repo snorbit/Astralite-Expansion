@@ -1,0 +1,21 @@
+{
+  "display": {
+    "icon": { "id": "astral_skies:astral_portal_frame" },
+    "title": { "translate": "advancements.astral_skies.sky_explorer.title" },
+    "description": { "translate": "advancements.astral_skies.sky_explorer.desc" },
+    "frame": "task",
+    "background": "astral_skies:textures/gui/advancements/backgrounds/sky.png",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "entered_sky": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "astral_skies:astral_sky"
+      }
+    }
+  },
+  "requirements": [["entered_sky"]]
+}
