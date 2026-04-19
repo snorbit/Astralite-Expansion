@@ -1,32 +1,82 @@
-# MultiLoader Template
+# ✦ Astral Skies — A Massive Sky-Focused Endgame Expansion
 
-This project provides a Gradle project template that can compile Minecraft mods for multiple modloaders using a common project for the sources. This project does not require any third party libraries or dependencies. If you have any questions or want to discuss the project, please join our [Discord](https://discord.myceliummod.network).
+**Minecraft 1.21.1 | NeoForge + Fabric**
 
-## Getting Started
+Astral Skies is a massive endgame expansion mod that adds an entirely new sky dimension filled with floating islands, dangerous bosses, powerful gear, and buildable aircraft.
 
-### IntelliJ IDEA
-This guide will show how to import the MultiLoader Template into IntelliJ IDEA. The setup process is roughly equivalent to setting up the modloaders independently and should be very familiar to anyone who has worked with their MDKs.
+## ✦ Features
 
-1. Clone or download this repository to your computer.
-2. Configure the project by setting the properties in the `gradle.properties` file. You will also need to change the `rootProject.name`  property in `settings.gradle`, this should match the folder name of your project, or else IDEA may complain.
-3. Open the template's root folder as a new project in IDEA. This is the folder that contains this README.md file and the gradlew executable.
-4. If your default JVM/JDK is not Java 21 you will encounter an error when opening the project. This error is fixed by going to `File > Settings > Build, Execution, Deployment > Build Tools > Gradle > Gradle JVM` and changing the value to a valid Java 21 JVM. You will also need to set the Project SDK to Java 21. This can be done by going to `File > Project Structure > Project SDK`. Once both have been set open the Gradle tab in IDEA and click the refresh button to reload the project.
-5. Open your Run/Debug Configurations. Under the `Application` category there should now be options to run Fabric and NeoForge projects. Select one of the client options and try to run it.
-6. Assuming you were able to run the game in step 5 your workspace should now be set up.
+### 🌤 Astral Sky Dimension
+- A custom sky dimension with **4 unique biomes**: Rocky, Crystal, Storm, and Ruined Sky Islands
+- Floating islands generated using the `floating_islands` noise settings
+- Portal system: build an **Astral Portal Frame** and activate it with an **Astral Compass**
 
-### Eclipse
-While it is possible to use this template in Eclipse it is not recommended. During the development of this template multiple critical bugs and quirks related to Eclipse were found at nearly every level of the required build tools. While we continue to work with these tools to report and resolve issues support for projects like these are not there yet. For now Eclipse is considered unsupported by this project. The development cycle for build tools is notoriously slow so there are no ETAs available.
+### ⛏ Astralite — New Endgame Material
+- **Astralite Ore** spawns exclusively in sky island stone cores
+- Full tool suite: **Sword, Pickaxe, Axe, Shovel, Hoe** — all stronger than Netherite
+- Full armor set with **8 defense + 4 toughness per piece**
+- Custom tool tier with 4000 durability, 12.0 mining speed
 
-## Development Guide
-When using this template the majority of your mod should be developed in the `common` project. The `common` project is compiled against the vanilla game and is used to hold code that is shared between the different loader-specific versions of your mod. The `common` project has no knowledge or access to ModLoader specific code, apis, or concepts. Code that requires something from a specific loader must be done through the project that is specific to that loader, such as the `fabric` or `neoforge` projects.
+### 💎 Legendary Boss Drops
+Six legendary bosses, each dropping a unique piece of gear:
+| Boss | HP | Drop |
+|---|---|---|
+| Leviathan | 1200 | Leviathan Helmet |
+| Storm Warden | 1000 | Stormcall Chestplate |
+| Void Stalker | 900 | Void Stalker Leggings |
+| Crystal Sovereign | 950 | Sovereign's Boots |
+| Sky Tyrant | 1100 | Tyrant's Blade (18 dmg) |
+| Ruined Titan | 1300 | Titan's Pickaxe |
 
-Loader specific projects such as the `fabric` and `neoforge` project are used to load the `common` project into the game. These projects also define code that is specific to that loader. Loader specific projects can access all the code in the `common` project. It is important to remember that the `common` project can not access code from loader specific projects.
+### ✨ 10 Custom Enchantments
+Sky Slayer, Astral Edge, Starfall, Life Steal (secret), Astral Protection, Void Shield, Sky Walker, Cloud Step, Sky Miner, Gale Force
 
-## Removing Platforms and Loaders
-While this template has support for many modloaders, new loaders may appear in the future, and existing loaders may become less relevant.
+### ✦ Astral Powers UI
+- Craft the **Astral Tome** to unlock 6 powerful abilities:
+  - ⭐ Star Shield — Resistance + Absorption
+  - 🌙 Lunar Grace — Slow Fall + Jump Boost
+  - ⚡ Astral Rush — Speed + Haste
+  - 👁 Celestial Vision — Night Vision
+  - ❤ Stellar Regeneration — Regen + Saturation
+  - 🔥 Nova Burst — Fire Resistance + Strength
 
-Removing loader specific projects is as easy as deleting the folder, and removing the `include("projectname")` line from the `settings.gradle` file.
-For example if you wanted to remove support for `forge` you would follow the following steps:
+### ✈ Buildable Aircraft
+- Multi-block aircraft system: Hull, Engine, Propeller, Control Panel
+- WASD flight controls with Space/Shift for altitude
+- Fuel system using Astralite Scrap
 
-1. Delete the subproject folder. For example, delete `MultiLoader-Template/forge`.
-2. Remove the project from `settings.gradle`. For example, remove `include("forge")`. 
+### 🏛 Structures
+- **Sky Temple** — large structure with loot chests
+- **Ruined Tower** — medium structure in ruined biomes
+- **Crystal Shrine** — small structure in crystal biomes
+
+### 🐱 Secret Content
+- **Riley NPC** — an invincible, annoying companion who follows you around
+- **Riley Boss** — an easy introductory boss
+- **†Kurumi†** — a secret endgame boss inspired by Date A Live
+- **Zafkiel** — Kurumi's clock weapon (boss drop)
+- **Kurumi Companion** — a tameable pet hatched from the Kurumi Egg
+
+## ✦ Installation
+
+1. Install Minecraft 1.21.1
+2. Install NeoForge 21.1.80+ or Fabric Loader 0.16.9+
+3. Place the mod JAR in your `mods` folder
+4. Launch and enjoy!
+
+## ✦ Building from Source
+
+```bash
+./gradlew build
+```
+
+Requires Java 21. Built JARs will be in `fabric/build/libs/` and `neoforge/build/libs/`.
+
+## ✦ Credits
+
+- **Snorbitzz** — Creator & developer
+- Built with the [MultiLoader Template](https://github.com/jaredlll08/MultiLoader-Template)
+
+## ✦ License
+
+CC0-1.0

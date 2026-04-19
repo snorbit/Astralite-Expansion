@@ -168,5 +168,7 @@ public class AircraftEntity extends Entity {
     }
 
     @Override
-    public double getPassengersRidingOffset() { return 0.5; }
+    protected net.minecraft.world.phys.Vec3 getPassengerRidingPosition(Entity passenger) {
+        return super.getPassengerRidingPosition(passenger).add(0, 0.5, 0);
+    }
 }

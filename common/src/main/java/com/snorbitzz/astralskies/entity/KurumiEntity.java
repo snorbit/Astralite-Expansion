@@ -53,7 +53,7 @@ public class KurumiEntity extends PathfinderMob {
         this.bossBar = new ServerBossEvent(
                 Component.literal("§5✦ Kurumi Tokisaki ✦"),
                 BossEvent.BossBarColor.PURPLE,
-                BossEvent.BossBarOverlay.SEGMENTED_10
+                BossEvent.BossBarOverlay.NOTCHED_10
         );
     }
 

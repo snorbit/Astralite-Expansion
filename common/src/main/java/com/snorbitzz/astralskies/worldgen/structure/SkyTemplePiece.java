@@ -14,7 +14,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.chunk.ChunkGenerator;
 import net.minecraft.world.level.levelgen.structure.BoundingBox;
 import net.minecraft.world.level.levelgen.structure.StructurePiece;
-import net.minecraft.world.level.levelgen.structure.StructurePieceType;
+import net.minecraft.world.level.levelgen.structure.pieces.StructurePieceType;
 import net.minecraft.world.level.levelgen.structure.pieces.StructurePieceSerializationContext;
 import net.minecraft.world.level.storage.loot.BuiltInLootTables;
 import net.minecraft.resources.ResourceLocation;
@@ -61,12 +61,12 @@ public class SkyTemplePiece extends StructurePiece {
                             BoundingBox bounds, ChunkPos chunkPos,
                             BlockPos pivot) {
         // ─── Base platform (3 thick) ──────────────────────────────────────────
-        fillLayerClamped(level, bounds, ModBlocks.FLOATING_STONE.defaultBlockState(), 0, 0, 0, W-1, 2, D-1);
-        fillLayerClamped(level, bounds, ModBlocks.ASTRAL_DIRT.defaultBlockState(),    1, 3, 1, W-2, 3, D-2);
+        fillLayerClamped(level, bounds, ModBlocks.FLOATING_STONE.get().defaultBlockState(), 0, 0, 0, W-1, 2, D-1);
+        fillLayerClamped(level, bounds, ModBlocks.ASTRAL_DIRT.get().defaultBlockState(),    1, 3, 1, W-2, 3, D-2);
 
         // ─── Outer walls (crystal block, 5 tall) ─────────────────────────────
-        BlockState crystal = ModBlocks.CRYSTAL_BLOCK.defaultBlockState();
-        BlockState stone   = ModBlocks.FLOATING_STONE.defaultBlockState();
+        BlockState crystal = ModBlocks.CRYSTAL_BLOCK.get().defaultBlockState();
+        BlockState stone   = ModBlocks.FLOATING_STONE.get().defaultBlockState();
 
         // North/South walls
         for (int z : new int[]{0, D-1}) {
@@ -86,13 +86,13 @@ public class SkyTemplePiece extends StructurePiece {
 
         // ─── Astralite ore columns (4 total, midpoints of walls) ─────────────
         for (int[] col : new int[][]{{7,1},{7,D-2},{1,7},{W-2,7}}) {
-            fillLayerClamped(level, bounds, ModBlocks.ASTRALITE_ORE.defaultBlockState(),
+            fillLayerClamped(level, bounds, ModBlocks.ASTRALITE_ORE.get().defaultBlockState(),
                     col[0], 4, col[1], col[0], 7, col[1]);
         }
 
         // ─── Centre: portal frame ring ────────────────────────────────────────
         int cx = W/2, cz = D/2;
-        BlockState frame = ModBlocks.ASTRAL_PORTAL_FRAME.defaultBlockState();
+        BlockState frame = ModBlocks.ASTRAL_PORTAL_FRAME.get().defaultBlockState();
         // 3×3 ring at y=4, leave centre open
         for (int dx = -1; dx <= 1; dx++) {
             for (int dz = -1; dz <= 1; dz++) {
@@ -106,7 +106,9 @@ public class SkyTemplePiece extends StructurePiece {
         BlockPos chestPos = getWorldPos(cx, 4, cz);
         if (bounds.isInside(chestPos) && level.getBlockEntity(chestPos) instanceof ChestBlockEntity chest) {
             chest.setLootTable(
-                    ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "chests/sky_temple"),
+                    net.minecraft.resources.ResourceKey.create(
+                            net.minecraft.core.registries.Registries.LOOT_TABLE,
+                            ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "chests/sky_temple")),
                     rand.nextLong()
             );
         }
@@ -135,7 +137,7 @@ public class SkyTemplePiece extends StructurePiece {
     }
 
     /** Converts local structure coordinates to world coordinates. */
-    private BlockPos getWorldPos(int x, int y, int z) {
+    protected BlockPos getWorldPos(int x, int y, int z) {
         return new BlockPos(
                 this.boundingBox.minX() + x,
                 this.boundingBox.minY() + y,

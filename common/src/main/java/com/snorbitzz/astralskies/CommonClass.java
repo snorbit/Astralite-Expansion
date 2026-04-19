@@ -10,12 +10,13 @@ import com.snorbitzz.astralskies.registry.ModCreativeTabs;
 import com.snorbitzz.astralskies.registry.ModEnchantments;
 import com.snorbitzz.astralskies.registry.ModGear;
 import com.snorbitzz.astralskies.registry.ModItems;
+import com.snorbitzz.astralskies.registry.ModMenuTypes;
 import com.snorbitzz.astralskies.worldgen.ModWorldGen;
 import com.snorbitzz.astralskies.worldgen.structure.ModStructures;
 
 /**
  * Shared entry point for both Fabric and NeoForge.
- * Order: Blocks → Items → Gear → Aircraft → Entities → Creative Tab → WorldGen → Enchantments.
+ * Order: Blocks → Items → Gear → Aircraft → Entities → Creative Tab → WorldGen → Enchantments → Menus.
  */
 public class CommonClass {
 
@@ -36,5 +37,6 @@ public class CommonClass {
         ModWorldGen.init();
         ModStructures.init();
         ModEnchantments.init();
+        ModMenuTypes.init();
     }
 }

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [" S ", "SES", " S "],
+  "key": {
+    "S": { "item": "astral_skies:astralite_scrap" },
+    "E": { "item": "minecraft:ender_eye" }
+  },
+  "result": { "item": "astral_skies:astral_compass", "count": 1 }
+}

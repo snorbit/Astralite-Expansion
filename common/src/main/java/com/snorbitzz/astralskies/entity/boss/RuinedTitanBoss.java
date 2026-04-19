@@ -37,7 +37,7 @@ public class RuinedTitanBoss extends PathfinderMob {
         this.bossBar = new ServerBossEvent(
                 Component.literal("§2🗿 Ruined Titan"),
                 BossEvent.BossBarColor.GREEN,
-                BossEvent.BossBarOverlay.SEGMENTED_20
+                BossEvent.BossBarOverlay.NOTCHED_20
         );
     }
 

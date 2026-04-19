@@ -43,9 +43,9 @@ public class ModStructures {
                 () -> codec);
     }
 
-    private static net.minecraft.world.level.levelgen.structure.StructurePieceType registerPiece(
+    private static net.minecraft.world.level.levelgen.structure.pieces.StructurePieceType registerPiece(
             String name,
-            net.minecraft.world.level.levelgen.structure.StructurePieceType type) {
+            net.minecraft.world.level.levelgen.structure.pieces.StructurePieceType type) {
         return Registry.register(BuiltInRegistries.STRUCTURE_PIECE,
                 ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, name), type);
     }

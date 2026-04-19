@@ -35,7 +35,7 @@ public class StormWardenBoss extends PathfinderMob {
         this.bossBar = new ServerBossEvent(
                 Component.literal("§e⚡ Storm Warden"),
                 BossEvent.BossBarColor.YELLOW,
-                BossEvent.BossBarOverlay.SEGMENTED_20
+                BossEvent.BossBarOverlay.NOTCHED_20
         );
     }
 
@@ -73,7 +73,11 @@ public class StormWardenBoss extends PathfinderMob {
             });
             // Strike lightning at player if on server
             if (getTarget() instanceof Player target && level() instanceof net.minecraft.server.level.ServerLevel sl) {
-                sl.strikeLightning(net.minecraft.world.entity.EntityType.LIGHTNING_BOLT.create(sl));
+                net.minecraft.world.entity.LightningBolt bolt = net.minecraft.world.entity.EntityType.LIGHTNING_BOLT.create(sl);
+                if (bolt != null) {
+                    bolt.moveTo(target.getX(), target.getY(), target.getZ());
+                    sl.addFreshEntity(bolt);
+                }
             }
             abilityCooldown = 100;
         }

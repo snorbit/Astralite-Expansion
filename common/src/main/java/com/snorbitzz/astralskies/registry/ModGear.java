@@ -8,8 +8,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.*;
-import net.minecraft.world.item.equipment.ArmorMaterial;
-import net.minecraft.world.item.equipment.ArmorType;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.ArmorMaterial;
 
 import java.util.EnumMap;
 import java.util.List;
@@ -41,15 +41,15 @@ public class ModGear {
             new ArmorMaterial(
                     // Defense values per armor type
                     new EnumMap<>(Map.of(
-                            ArmorType.HELMET,     8,
-                            ArmorType.CHESTPLATE, 8,
-                            ArmorType.LEGGINGS,   8,
-                            ArmorType.BOOTS,      8
+                            ArmorItem.Type.HELMET,     8,
+                            ArmorItem.Type.CHESTPLATE, 8,
+                            ArmorItem.Type.LEGGINGS,   8,
+                            ArmorItem.Type.BOOTS,      8
                     )),
                     22,                                   // enchantability (high, like gold-tier)
                     SoundEvents.ARMOR_EQUIP_NETHERITE,    // equip sound
-                    () -> Ingredient.of(ModItems.ASTRALITE_SCRAP.get()),
-                    List.of(),                            // overlays (none — solid material)
+                    () -> net.minecraft.world.item.crafting.Ingredient.of(ModItems.ASTRALITE_SCRAP.get()),
+                    List.of(),                            // overlays (none -- solid material)
                     4.0f,                                 // toughness per piece
                     0.2f                                  // knockback resistance per piece
             )
@@ -58,16 +58,16 @@ public class ModGear {
     // ─── Armor Items ──────────────────────────────────────────────────────────
 
     public static final ModItems.RegistryObject<ArmorItem> ASTRALITE_HELMET = registerArmor(
-            "astralite_helmet", ArmorType.HELMET);
+            "astralite_helmet", ArmorItem.Type.HELMET);
 
     public static final ModItems.RegistryObject<ArmorItem> ASTRALITE_CHESTPLATE = registerArmor(
-            "astralite_chestplate", ArmorType.CHESTPLATE);
+            "astralite_chestplate", ArmorItem.Type.CHESTPLATE);
 
     public static final ModItems.RegistryObject<ArmorItem> ASTRALITE_LEGGINGS = registerArmor(
-            "astralite_leggings", ArmorType.LEGGINGS);
+            "astralite_leggings", ArmorItem.Type.LEGGINGS);
 
     public static final ModItems.RegistryObject<ArmorItem> ASTRALITE_BOOTS = registerArmor(
-            "astralite_boots", ArmorType.BOOTS);
+            "astralite_boots", ArmorItem.Type.BOOTS);
 
     // ─── Weapons ──────────────────────────────────────────────────────────────
 
@@ -81,6 +81,50 @@ public class ModGear {
                     ModToolTiers.ASTRALITE,
                     new Item.Properties()
                             .attributes(SwordItem.createAttributes(ModToolTiers.ASTRALITE, 7, -2.4f))
+            ));
+
+    /**
+     * Astralite Pickaxe — fastest pickaxe in the mod, essential for sky mining.
+     */
+    public static final ModItems.RegistryObject<PickaxeItem> ASTRALITE_PICKAXE = registerItem(
+            "astralite_pickaxe",
+            () -> new PickaxeItem(
+                    ModToolTiers.ASTRALITE,
+                    new Item.Properties()
+                            .attributes(PickaxeItem.createAttributes(ModToolTiers.ASTRALITE, 3, -2.8f))
+            ));
+
+    /**
+     * Astralite Axe — powerful woodchopping + combat hybrid.
+     */
+    public static final ModItems.RegistryObject<AxeItem> ASTRALITE_AXE = registerItem(
+            "astralite_axe",
+            () -> new AxeItem(
+                    ModToolTiers.ASTRALITE,
+                    new Item.Properties()
+                            .attributes(AxeItem.createAttributes(ModToolTiers.ASTRALITE, 8, -3.0f))
+            ));
+
+    /**
+     * Astralite Shovel — fast digging for sky island dirt/gravel.
+     */
+    public static final ModItems.RegistryObject<ShovelItem> ASTRALITE_SHOVEL = registerItem(
+            "astralite_shovel",
+            () -> new ShovelItem(
+                    ModToolTiers.ASTRALITE,
+                    new Item.Properties()
+                            .attributes(ShovelItem.createAttributes(ModToolTiers.ASTRALITE, 3.5f, -3.0f))
+            ));
+
+    /**
+     * Astralite Hoe — ultra-efficient farming tool.
+     */
+    public static final ModItems.RegistryObject<HoeItem> ASTRALITE_HOE = registerItem(
+            "astralite_hoe",
+            () -> new HoeItem(
+                    ModToolTiers.ASTRALITE,
+                    new Item.Properties()
+                            .attributes(HoeItem.createAttributes(ModToolTiers.ASTRALITE, -1, 0.0f))
             ));
 
     // ─── Registration Helpers ─────────────────────────────────────────────────
@@ -97,12 +141,12 @@ public class ModGear {
         );
     }
 
-    private static ModItems.RegistryObject<ArmorItem> registerArmor(String name, ArmorType type) {
+    private static ModItems.RegistryObject<ArmorItem> registerArmor(String name, ArmorItem.Type type) {
         ArmorItem item = new ArmorItem(
                 ASTRALITE_ARMOR_MATERIAL,
                 type,
                 new Item.Properties()
-                        .durability(type.getDurability(ArmorMaterial.DEFAULT_DURABILITY_MULTIPLIER * 3))
+                        .durability(type.getDurability(37 * 3))
         );
         Registry.register(BuiltInRegistries.ITEM,
                 ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, name), item);

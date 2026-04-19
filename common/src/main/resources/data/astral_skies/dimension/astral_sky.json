@@ -3,8 +3,14 @@
   "generator": {
     "type": "minecraft:noise",
     "biome_source": {
-      "type": "minecraft:fixed",
-      "biome": "astral_skies:rocky_sky_island"
+      "type": "minecraft:checkerboard",
+      "biomes": [
+        "astral_skies:rocky_sky_island",
+        "astral_skies:crystal_sky_island",
+        "astral_skies:storm_sky_island",
+        "astral_skies:ruined_sky_island"
+      ],
+      "scale": 4
     },
     "settings": "minecraft:floating_islands"
   }

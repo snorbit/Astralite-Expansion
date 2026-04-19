@@ -68,7 +68,7 @@ public class ZafkielItem extends Item {
                     1.0f, 0.5f);
 
             player.sendSystemMessage(Component.literal(
-                    "§5⏱ Zafkiel: §d\"Aleph — the first bullet of time.\""));
+                    "\u00a75[Zafkiel]: \u00a7d\"Aleph -- the first bullet of time.\""));
         }
 
         player.getCooldowns().addCooldown(this, COOLDOWN_TICKS);

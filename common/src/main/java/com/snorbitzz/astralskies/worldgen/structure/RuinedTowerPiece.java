@@ -11,8 +11,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.chunk.ChunkGenerator;
 import net.minecraft.world.level.levelgen.structure.BoundingBox;
 import net.minecraft.world.level.levelgen.structure.StructurePiece;
-import net.minecraft.world.level.levelgen.structure.StructurePieceType;
-import net.minecraft.world.level.levelgen.structure.StructureManager;
+import net.minecraft.world.level.levelgen.structure.pieces.StructurePieceType;
+import net.minecraft.world.level.StructureManager;
 import net.minecraft.world.level.levelgen.structure.pieces.StructurePieceSerializationContext;
 import com.snorbitzz.astralskies.registry.ModBlocks;
 
@@ -51,9 +51,9 @@ public class RuinedTowerPiece extends StructurePiece {
                             ChunkGenerator gen, RandomSource rand,
                             BoundingBox bounds, ChunkPos chunkPos,
                             BlockPos pivot) {
-        BlockState stone   = ModBlocks.FLOATING_STONE.defaultBlockState();
-        BlockState crystal = ModBlocks.CRYSTAL_BLOCK.defaultBlockState();
-        BlockState ore     = ModBlocks.ASTRALITE_ORE.defaultBlockState();
+        BlockState stone   = ModBlocks.FLOATING_STONE.get().defaultBlockState();
+        BlockState crystal = ModBlocks.CRYSTAL_BLOCK.get().defaultBlockState();
+        BlockState ore     = ModBlocks.ASTRALITE_ORE.get().defaultBlockState();
 
         // Full hollow tower
         for (int y = 0; y < H; y++) {
@@ -91,7 +91,9 @@ public class RuinedTowerPiece extends StructurePiece {
         if (bounds.isInside(chestPos) &&
                 level.getBlockEntity(chestPos) instanceof net.minecraft.world.level.block.entity.ChestBlockEntity c) {
             c.setLootTable(
-                    net.minecraft.resources.ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "chests/ruined_tower"),
+                    net.minecraft.resources.ResourceKey.create(
+                            net.minecraft.core.registries.Registries.LOOT_TABLE,
+                            net.minecraft.resources.ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "chests/ruined_tower")),
                     rand.nextLong()
             );
         }
@@ -106,7 +108,7 @@ public class RuinedTowerPiece extends StructurePiece {
         if (bounds.isInside(pos)) level.setBlock(pos, state, 2);
     }
 
-    private BlockPos getWP(int x, int y, int z) {
+    protected BlockPos getWP(int x, int y, int z) {
         return new BlockPos(boundingBox.minX() + x, boundingBox.minY() + y, boundingBox.minZ() + z);
     }
 }

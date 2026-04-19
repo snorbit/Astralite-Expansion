@@ -7,8 +7,8 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.*;
-import net.minecraft.world.item.equipment.ArmorMaterial;
-import net.minecraft.world.item.equipment.ArmorType;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.ArmorMaterial;
 
 import java.util.EnumMap;
 import java.util.List;
@@ -44,14 +44,14 @@ public class LegendaryItems {
             "legendary",
             new ArmorMaterial(
                     new EnumMap<>(Map.of(
-                            ArmorType.HELMET,     12,
-                            ArmorType.CHESTPLATE, 12,
-                            ArmorType.LEGGINGS,   12,
-                            ArmorType.BOOTS,      12
+                            ArmorItem.Type.HELMET,     12,
+                            ArmorItem.Type.CHESTPLATE, 12,
+                            ArmorItem.Type.LEGGINGS,   12,
+                            ArmorItem.Type.BOOTS,      12
                     )),
                     30,                                       // enchantability (very high)
                     SoundEvents.ARMOR_EQUIP_NETHERITE,
-                    () -> Ingredient.of(ModItems.ASTRALITE_SHARD.get()),
+                    () -> net.minecraft.world.item.crafting.Ingredient.of(ModItems.ASTRALITE_SHARD.get()),
                     List.of(),
                     6.0f,                                     // toughness per piece
                     0.3f                                      // knockback resistance
@@ -62,19 +62,19 @@ public class LegendaryItems {
 
     /** Leviathan Helmet — +12 defense, +6 toughness. Dropped by the Leviathan. */
     public static final ModItems.RegistryObject<ArmorItem> LEVIATHAN_HELMET =
-            registerArmor("leviathan_helmet", ArmorType.HELMET);
+            registerArmor("leviathan_helmet", ArmorItem.Type.HELMET);
 
     /** Stormcall Chestplate — +12 defense, +6 toughness. Dropped by the Storm Warden. */
     public static final ModItems.RegistryObject<ArmorItem> STORMCALL_CHESTPLATE =
-            registerArmor("stormcall_chestplate", ArmorType.CHESTPLATE);
+            registerArmor("stormcall_chestplate", ArmorItem.Type.CHESTPLATE);
 
     /** Void Stalker Leggings — +12 defense, +6 toughness. Dropped by the Void Stalker. */
     public static final ModItems.RegistryObject<ArmorItem> VOID_STALKER_LEGGINGS =
-            registerArmor("void_stalker_leggings", ArmorType.LEGGINGS);
+            registerArmor("void_stalker_leggings", ArmorItem.Type.LEGGINGS);
 
     /** Sovereign's Boots — +12 defense, +6 toughness. Dropped by the Crystal Sovereign. */
     public static final ModItems.RegistryObject<ArmorItem> SOVEREIGN_BOOTS =
-            registerArmor("sovereign_boots", ArmorType.BOOTS);
+            registerArmor("sovereign_boots", ArmorItem.Type.BOOTS);
 
     // ─── Weapons (2 bosses) ───────────────────────────────────────────────────
 
@@ -118,11 +118,11 @@ public class LegendaryItems {
         );
     }
 
-    private static ModItems.RegistryObject<ArmorItem> registerArmor(String name, ArmorType type) {
+    private static ModItems.RegistryObject<ArmorItem> registerArmor(String name, ArmorItem.Type type) {
         ArmorItem item = new ArmorItem(
                 LEGENDARY_ARMOR_MATERIAL, type,
                 new Item.Properties()
-                        .durability(type.getDurability(ArmorMaterial.DEFAULT_DURABILITY_MULTIPLIER * 5))
+                        .durability(type.getDurability(37 * 5))
         );
         Registry.register(BuiltInRegistries.ITEM,
                 ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, name), item);

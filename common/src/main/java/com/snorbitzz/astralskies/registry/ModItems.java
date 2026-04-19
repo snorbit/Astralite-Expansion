@@ -1,6 +1,7 @@
 package com.snorbitzz.astralskies.registry;
 
 import com.snorbitzz.astralskies.Constants;
+import com.snorbitzz.astralskies.item.AstralTomeItem;
 import com.snorbitzz.astralskies.item.KurumiEggItem;
 import com.snorbitzz.astralskies.item.ZafkielItem;
 import net.minecraft.core.Registry;
@@ -51,6 +52,15 @@ public class ModItems {
      */
     public static final RegistryObject<KurumiEggItem> KURUMI_EGG = register("kurumi_egg",
             () -> new KurumiEggItem(new Item.Properties()));
+
+    // ─── Astral Tome ──────────────────────────────────────────────────────────
+
+    /**
+     * Astral Tome — right-click to open the Astral Powers menu.
+     * Crafted from Astralite Shards + Book.
+     */
+    public static final RegistryObject<AstralTomeItem> ASTRAL_TOME = register("astral_tome",
+            () -> new AstralTomeItem(new Item.Properties().stacksTo(1)));
 
     // ─── Registration ─────────────────────────────────────────────────────────
 

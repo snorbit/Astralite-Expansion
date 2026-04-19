@@ -35,7 +35,7 @@ public class CrystalSovereignBoss extends PathfinderMob {
         this.bossBar = new ServerBossEvent(
                 Component.literal("§d💎 Crystal Sovereign"),
                 BossEvent.BossBarColor.PINK,
-                BossEvent.BossBarOverlay.SEGMENTED_20
+                BossEvent.BossBarOverlay.NOTCHED_20
         );
     }
 

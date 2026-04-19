@@ -5,6 +5,8 @@ import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
+import net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal;
+import net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 
@@ -79,5 +81,10 @@ public class KurumiCompanionEntity extends TamableAnimal {
     public net.minecraft.world.entity.AgeableMob getBreedOffspring(net.minecraft.server.level.ServerLevel level,
                                                                      net.minecraft.world.entity.AgeableMob other) {
         return null; // Cannot breed
+    }
+
+    @Override
+    public boolean isFood(net.minecraft.world.item.ItemStack stack) {
+        return false; // Cannot breed, no food items
     }
 }

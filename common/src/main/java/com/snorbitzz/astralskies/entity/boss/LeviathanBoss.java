@@ -35,7 +35,7 @@ public class LeviathanBoss extends PathfinderMob {
         this.bossBar = new ServerBossEvent(
                 Component.literal("§9⚓ Leviathan"),
                 BossEvent.BossBarColor.BLUE,
-                BossEvent.BossBarOverlay.SEGMENTED_20
+                BossEvent.BossBarOverlay.NOTCHED_20
         );
     }
 

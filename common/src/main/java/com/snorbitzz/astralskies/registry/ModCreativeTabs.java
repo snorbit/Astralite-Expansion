@@ -17,7 +17,7 @@ import net.minecraft.world.item.ItemStack;
 public class ModCreativeTabs {
 
     public static final ModItems.RegistryObject<CreativeModeTab> ASTRAL_SKIES_TAB =
-            register("astral_skies_tab", () -> CreativeModeTab.builder()
+            register("astral_skies_tab", () -> CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0)
                     .title(Component.translatable("itemGroup.astral_skies.astral_skies_tab"))
                     .icon(() -> new ItemStack(ModItems.ASTRALITE_SHARD.get()))
                     .displayItems((parameters, output) -> {
@@ -43,8 +43,12 @@ public class ModCreativeTabs {
                         // Tools & utility
                         output.accept(ModItems.ASTRAL_COMPASS.get());
 
-                        // Weapons
+                        // Weapons & Tools
                         output.accept(ModGear.ASTRALITE_SWORD.get());
+                        output.accept(ModGear.ASTRALITE_PICKAXE.get());
+                        output.accept(ModGear.ASTRALITE_AXE.get());
+                        output.accept(ModGear.ASTRALITE_SHOVEL.get());
+                        output.accept(ModGear.ASTRALITE_HOE.get());
 
                         // Armor
                         output.accept(ModGear.ASTRALITE_HELMET.get());
@@ -71,6 +75,9 @@ public class ModCreativeTabs {
                         // Legendary boss drops (weapons)
                         output.accept(LegendaryItems.TYRANTS_BLADE.get());
                         output.accept(LegendaryItems.TITANS_PICKAXE.get());
+
+                        // Astral Tome (ability UI)
+                        output.accept(ModItems.ASTRAL_TOME.get());
 
                         // Portal
                         output.accept(ModBlocks.ASTRAL_PORTAL.get());

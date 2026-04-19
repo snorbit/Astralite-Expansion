@@ -39,7 +39,7 @@ public class VoidStalkerBoss extends PathfinderMob {
         this.bossBar = new ServerBossEvent(
                 Component.literal("§f◈ Void Stalker"),
                 BossEvent.BossBarColor.WHITE,
-                BossEvent.BossBarOverlay.SEGMENTED_20
+                BossEvent.BossBarOverlay.NOTCHED_20
         );
     }
 
